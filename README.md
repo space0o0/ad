@@ -1,5 +1,3 @@
-[![](https://jitpack.io/v/bayescom/Android_AdvanceSDK.svg)](https://jitpack.io/#bayescom/Android_AdvanceSDK)
-
 # 使用说明
 
 
