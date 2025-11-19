@@ -1,0 +1,68 @@
+apply plugin: 'com.android.library'
+
+// JitPack Maven
+apply plugin: 'com.github.dcendents.android-maven'
+// Your Group
+group = 'com.github.bayescom'
+
+def pomName = "advance-mry"
+
+//定义mercury版本号
+def meryVersion = '4.6.1'
+def advanceVersionName = "${rootProject.ext.advance_version}_461"
+def advanceVersionCode = 1
+
+
+def outputName = pomName + "_" + advanceVersionName + ".aar"
+
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 29
+        versionCode advanceVersionCode
+        versionName advanceVersionName
+
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    println "advanceVersionName = " + advanceVersionName
+}
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+android.libraryVariants.all { variant ->
+    variant.outputs.all {
+        outputFileName = outputName
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+    compileOnly project(path: ':advancelib')
+    api "io.github.bayescom:mercury-sdk:${meryVersion}"
+
+}
+

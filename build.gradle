@@ -1,0 +1,72 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+//def version = '5.2.2'
+def version = '1.0.0'
+def versionExt = ''
+
+ext {
+    //核心策略lib的SDK version，三位递增变化
+    advance_lib_version = version
+    //上传到gradle的统一版本号，应用于全部渠道和core，可以附加补充标识用来测试集成
+    advance_version = version + versionExt
+
+}
+
+
+
+buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        google()
+        jcenter()
+        //maven依赖库
+        maven { url 'https://s01.oss.sonatype.org/content/groups/public' }
+        maven { url 'https://artifact.bytedance.com/repository/pangle' }
+        //GroMore SDK依赖
+        maven {
+            url "https://artifact.bytedance.com/repository/pangle"
+        }
+        // 配置HUAWEI Ads SDK的Maven仓地址
+        maven { url 'https://developer.huawei.com/repo/' }
+        maven { url "https://plugins.gradle.org/m2/" }
+        // 配置荣耀商推SDK的 Maven 仓地址，包含HA和荣耀identifier包
+        maven {
+            url 'https://developer.hihonor.com/repo/'
+        }
+    }
+    dependencies {
+//        classpath 'com.android.tools.build:gradle:3.6.3'
+        classpath "com.android.tools.build:gradle:4.1.3"
+
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+        google()
+        jcenter()
+        //maven依赖库
+        maven { url 'https://s01.oss.sonatype.org/content/groups/public' }
+        //GroMore SDK依赖
+        maven {
+            url "https://artifact.bytedance.com/repository/pangle"
+        }
+        // 配置HUAWEI Ads SDK的Maven仓地址
+        maven { url 'https://developer.huawei.com/repo/' }
+        // 配置荣耀商推SDK的 Maven 仓地址，包含HA和荣耀identifier包
+        maven {
+            url 'https://developer.hihonor.com/repo/'
+        }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
