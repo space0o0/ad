@@ -51,15 +51,14 @@ repositories {
 
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
     compileOnly 'androidx.appcompat:appcompat:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 
     api fileTree(dir: 'libs', include: ["Baidu_MobAds_SDK_${libVersionName}.aar"])
-//    implementation(name:'Baidu_MobAds_SDK_940', ext:'aar')
-//    implementation('com.baidu:mobads:9.40')
+
 
     compileOnly project(path: ':advancelib')
     compileOnly 'io.github.bayescom:mercury-sdk:4.5.0'

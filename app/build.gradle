@@ -69,9 +69,9 @@ android {
         abortOnError false
     }
 
-    buildFeatures {
-        viewBinding true
-    }
+//    buildFeatures {
+//        viewBinding true
+//    }
 
     aaptOptions {
         cruncherEnabled = false
@@ -113,14 +113,14 @@ dependencies {
 
 //引入Advance SDK --------start--------
 
-//----------------引入方式1：在线依赖，适合直接使用得开发者
+//----------------引入方式1：在线依赖，适合直接使用得开发者，具体的SDK版本请参考advanceXXX库的gradle配置中引入得SDK版本号
 //1.1  必须引入部分： 首先引入聚合库，排除不需要的adapter库，此部分引入不包含广告aar文件，aar需单独引入。
-//    implementation('com.github.bayescom:Android_AdvanceSDK:5.2.3') {
+//    implementation('com.github.bayescom:Android_AdvanceSDK:xxx') {
 ////        穿山甲有两个版本的SDK。对应了两个adapter，注意只能使用一个，通过下方exclude方法移除掉不需要的版本
 ////        exclude module : 'advancecsj'
 //        exclude module: 'advancecsjoppo'
 //    }
-//    // 必须，Mercury SDK aar，最新版本请前往：https://www.bayescom.com/docsify/docs/#/bayescom/sdk/Android
+//    // 必须，Mercury SDK aar
 //    implementation "io.github.bayescom:mercury-sdk:XXX"
 //
 ////1.2  可选引入部分，引入各个广告ADN得aar
@@ -155,8 +155,8 @@ dependencies {
 
 //----------------3.额外引入项. 部分广告SDK必须依赖项引入，请确保添加，另注意查看APP自身是否有相关重复引入，避免产生冲突
     //---快手--- 必须依赖的引入库
-    implementation 'androidx.appcompat:appcompat:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.0'
 
     // ---oppo--- 必须依赖的引入库
     implementation 'androidx.palette:palette:1.0.0'//490版本新增

@@ -41,10 +41,6 @@ AdvanceSDK主要包含两部分，策略执行核心库（advancelib）和adapte
 | TapTap       |√|√|√ |√ |- |-| -|- |√
 | Sigmob       |√|√|- |√ |- |√| -|- |√
 | oppo       |√|√|√ |√ |√ |√| -|- |√
-| Vivo       |√|√|√ |√ |√ |√| -|- |√
-| 小米       |√|√|√ |√ |√ |-| -|- |√
-| 荣耀       |√|√|√ |√ |√ |√| -|- |√
-| 华为       |√|√|√ |√ |√ |√| -|- |√
 
 
 ## 使用环境
@@ -54,4 +50,3 @@ AndroidStudio 推荐版本：Android Studio Dolphin | 2021.3.1 Patch 1
 gradle 推荐版本：5.6.4
 
 demo工程已迁移至AndroidX
-# ad
