@@ -32,6 +32,7 @@ public boolean isADTrack = true;
     public boolean hasBDInit = false;
     public boolean hasTANXInit = false;
     public boolean hasTAPInit = false;
+    public boolean hasGOOGLEInit = false;
 
     //各平台最近一次初始化的APP_ID
     public String lastGDTAID = "";
@@ -40,6 +41,7 @@ public boolean isADTrack = true;
     public String lastBDAID = "";
     public String lastTANXAID = "";
     public String lastTAPAID = "";
+    public String lastGOOGLEID = "";
 
 //    public String oaid = "";
 //    public boolean useOAIDFromSource = true; //是否使用来自源代码方式获取oaid，默认true

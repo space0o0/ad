@@ -146,6 +146,16 @@ public class DemoIds {
                 result.fullscreen = "";
                 result.draw = "";
                 break;
+            case "google":
+                result.banner = "123123";
+                result.splash = "";
+                result.reward = "";
+                result.interstitial = "";
+                result.nativeExpress = "";
+                result.nativeCustom = "";
+                result.fullscreen = "";
+                result.draw = "";
+                break;
         }
         return result;
     }

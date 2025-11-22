@@ -2,7 +2,8 @@ apply plugin: 'com.android.library'
 
 
 // JitPack Maven
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 // Your Group
 group = 'com.github.bayescom'
 

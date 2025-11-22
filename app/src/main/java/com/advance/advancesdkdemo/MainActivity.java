@@ -138,7 +138,8 @@ public class MainActivity extends AppCompatActivity {
                 "小米 SDK 版本号：" + SupplierBridgeUtil.getSupVersion(AdvanceConfig.SDK_ID_XIAOMI) + "\n" +
                 "vivo SDK 版本号：" + SupplierBridgeUtil.getSupVersion(AdvanceConfig.SDK_ID_VIVO) + "\n" +
                 "荣耀 SDK 版本号：" + SupplierBridgeUtil.getSupVersion(AdvanceConfig.SDK_ID_HONOR) + "\n" +
-                "TapTap SDK 版本号： " + SupplierBridgeUtil.getSupVersion(AdvanceConfig.SDK_ID_TAP) + "\n"
+                "TapTap SDK 版本号： " + SupplierBridgeUtil.getSupVersion(AdvanceConfig.SDK_ID_TAP) + "\n" +
+                "Google SDK 版本号：" + SupplierBridgeUtil.getSupVersion(AdvanceConfig.SDK_ID_GOOGLE)
         );
 
         tv.setOnClickListener(new View.OnClickListener() {

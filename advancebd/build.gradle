@@ -2,7 +2,9 @@ apply plugin: 'com.android.library'
 
 
 // JitPack Maven
-apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
+
 // Your Group
 group = 'com.github.bayescom'
 
@@ -58,7 +60,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 
     api fileTree(dir: 'libs', include: ["Baidu_MobAds_SDK_${libVersionName}.aar"])
-
 
     compileOnly project(path: ':advancelib')
     compileOnly 'io.github.bayescom:mercury-sdk:4.5.0'
