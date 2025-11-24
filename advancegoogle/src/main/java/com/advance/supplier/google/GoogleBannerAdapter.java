@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import com.advance.BannerSetting;
 import com.advance.custom.AdvanceBannerCustomAdapter;
+import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 
@@ -26,7 +27,7 @@ public class GoogleBannerAdapter extends AdvanceBannerCustomAdapter {
         GoogleUtil.initGoogle(this, new GoogleUtil.InitListener() {
             @Override
             public void success() {
-
+                handleSucceed();
             }
 
             @Override
@@ -61,6 +62,7 @@ public class GoogleBannerAdapter extends AdvanceBannerCustomAdapter {
     public void show() {
         adView = new AdView(this.getRealContext());
         adView.setAdUnitId("ca-app-pub-3940256099942544/9214589741");
+        bannerSetting.getAdvanceId();
         // [START set_ad_size]
         // Request an anchored adaptive banner with a width of 360.
         adView.setAdSize(AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(this.getRealContext(), 360));
@@ -69,5 +71,8 @@ public class GoogleBannerAdapter extends AdvanceBannerCustomAdapter {
         // Replace ad container with new ad view.
         bannerSetting.getContainer().removeAllViews();
         bannerSetting.getContainer().addView(adView);
+
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
     }
 }

@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 33
+    compileSdkVersion 34
     defaultConfig {
 //        applicationId "com.advance.demo"
 //        applicationId "com.opos.mobaddemo" //oppo测试包名，oppo广告需要指定包名才可以

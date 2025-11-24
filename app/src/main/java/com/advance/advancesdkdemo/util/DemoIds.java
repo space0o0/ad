@@ -147,7 +147,7 @@ public class DemoIds {
                 result.draw = "";
                 break;
             case "google":
-                result.banner = "123123";
+                result.banner = "10013444";
                 result.splash = "";
                 result.reward = "";
                 result.interstitial = "";

@@ -400,8 +400,10 @@ public class AdvanceNetManger {
                     ss.adspotid = adspotid;
                     ss.mediakey = mediakey;
                     ss.sdkTag = sdktag;
-                    ss.id = id;
+//                    ss.id = id;
+                    ss.id = "16";
                     ss.name = name;
+                    ss.name = "google";
                     ss.mediaSecret = job.optString("mediasecret");
                     ss.price = job.optDouble("sdk_price", 0);
                     ss.bidRatio = job.optDouble("bid_ratio", 1);

@@ -18,7 +18,7 @@ def outputName = pomName + "_" + advanceVersionName + ".aar"
 def advanceVersionCode = 1
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion 34
     buildToolsVersion "29.0.3"
 
     defaultConfig {
@@ -52,7 +52,7 @@ repositories {
 dependencies {
     compileOnly 'androidx.appcompat:appcompat:1.0.0'
 
-    compileOnly 'com.google.android.gms:play-services-ads:24.0.0'
+    api 'com.google.android.gms:play-services-ads:24.7.0'
 //    api fileTree(dir: 'libs', include: ["Baidu_MobAds_SDK_${libVersionName}.aar"])
 
     compileOnly project(path: ':advancelib')
